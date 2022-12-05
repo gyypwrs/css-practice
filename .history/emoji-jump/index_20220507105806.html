@@ -1,0 +1,69 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-07 10:57:13
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-07 10:58:05
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      html,body{
+        height: 100%
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+      }
+      .root {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .box {
+        display: flex;
+        height: 300px;
+        width: 200px;
+        margin-right:40px ;
+        border-radius: 5px;
+      }
+      .box1 {
+        background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+      }
+      .box2 {
+        background-color: #68bfc9;
+        cursor:url('./cat(1).jpg'), default;
+      }
+      .box3 {
+        background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='48' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"), auto;
+      }
+      
+      p {
+        margin: auto;
+        color: #fff;
+        font-weight: 800;
+        font-size: 40px;
+      }
+     
+  </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="box box1">
+        <p>默认</p>
+      </div>
+      <div class="box box2">
+        <p>图片</p>
+      </div>
+      <div class="box box3">
+        <p>emoji</p>
+      </div>
+    </div>
+  </body>
+</html>

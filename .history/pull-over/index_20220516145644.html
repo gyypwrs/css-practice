@@ -1,0 +1,62 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-14 18:11:46
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-16 14:56:44
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .wrapper {
+      width: 800px;
+      height: 550px;
+      margin: auto;
+      background: red;
+    }
+
+    .push-line {
+      height: 550px;
+      width: 100px;
+      border-right: 2px solid green;
+      cursor: e-resize;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="push-line" onmousedown="move(this)" onmouseup="removeListener(this)"></div>
+  </div>
+  <script>
+    function move(parent) {
+      parent.style.width = 100
+      parent.addEventListener("mousemove", function (event) {
+        parent.style.width = parent.style.width ? parent.style.width + event.offsetX : 0 + event.offsetX
+      })
+    }
+    function removeListener(event) {
+      event.removeListener("mousemove", function () {
+        console.log('1232323')
+      })
+    }
+  </script>
+</body>
+
+</html>

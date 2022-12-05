@@ -1,0 +1,52 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-07 15:03:24
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-07 15:19:00
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      html,body{
+        height: 100%
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+      }
+      .root {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .box {
+        display: flex;
+        height: 300px;
+        width: 200px;
+        margin-right:40px ;
+        border-radius: 5px;
+      }
+     
+  </style>
+  </head>
+  <body>
+    <div class="root">
+      <canvas id="myCanvas" width="800" height="500"></canvas>
+    </div>
+  </body>
+  <script>
+    var canvas = document.getElementById('myCanvas')
+    var ctx = canvas.getContext("2d")
+    ctx.beginPath()
+    ctx.moveTo(0,0)
+    ctx.lineTo(300,150)
+    ctx.stroke()
+    
+  </script>
+</html>

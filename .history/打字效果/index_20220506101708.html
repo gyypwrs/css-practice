@@ -1,0 +1,65 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-05 18:15:40
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-06 10:17:08
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      html,body{
+        height: 100%
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+     .root {
+       display: flex;
+        height: 100%;
+        background-image: linear-gradient(to bottom, #cd9cf2 0%, #f6f3ff 100%);
+     }
+     .box {
+       width: 550px;
+       height: 400px;
+       margin: auto;
+     }
+     p {
+       position:absolute;
+       overflow: hidden;
+       font-size: 40px;
+       white-space: nowrap;
+       border-right: 1px solid black;
+       animation: 3s typing steps(20),1s caret steps(1) infinite ;
+     }
+     @keyframes typing {
+       from {
+         width: 0
+       }
+       to{ border-right-color:transparent; }
+       0%{  border-right:0;  }/*光标起始位置不显示*/
+       1%{ border-right:2px solid #000; }/*光标显示*/
+       99%{ border-right:2px solid #000; }
+       100%{border-right:0;}/*结束位置光标不显示*/
+     }
+     @keyframes caret {
+      from{  border-right-color:#000}
+      to{ border-right-color:transparent;/*文字透明化*/}
+     }
+  </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="box">
+			  <p>
+          I want to break free
+        </p>	
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-05 16:21:44
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-05 17:47:12
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      html,body{
+        height: 100%
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+     .root {
+       display: flex;
+        height: 100%;
+        background-image: linear-gradient(to bottom, #cd9cf2 0%, #f6f3ff 100%);
+        background-position: center top;
+	      background-size: cover;
+     }
+     .box {
+       width: 550px;
+       height: 400px;
+       margin: auto;
+       border-radius: 2%;
+       z-index: 1;
+       position: relative;
+     }
+     .box::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       z-index: -1;
+       filter: blur(20px);
+       background-image: linear-gradient(to bottom, #cd9cf2 0%, #f6f3ff 100%);
+       background-position: center top;
+       background-size: cover;
+       background-attachment: fixed;
+     }
+     h1 {
+       text-align: center;
+       margin-bottom: 20px;
+     } 
+     p {
+       text-indent: 2em;
+       line-height: 1.7;
+     }
+  </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="box">
+        <h1>WARFRAME</h1>	
+			<p>The Grineer, with their endless clone armies, have plunged the system into chaos. There is only one force that can match them, you.
+			You are Tenno, an ancient warrior, a master of gun and blade. You wield the mighty Warframes and command their awesome powers. Forge your weapons. Gather like-minded Tenno and take the fight back to the Grineer. The Origin System needs you once again. Are you ready?</p>	
+      </div>
+    </div>
+  </body>
+</html>

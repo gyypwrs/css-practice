@@ -1,0 +1,82 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-13 15:49:25
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-13 16:10:27
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    canvas {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    var canvas = document.querySelector("#canvas");
+    var ctx = canvas.getContext("2d");
+    var width = 0
+    var height = 0
+    // var mouseX = 0
+    // var mouseY= 0
+    // window.onresize = resizeCanvas;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    resizeCanvas()
+    function drawRing() {
+      ctx.beginPath()
+      ctx.arc(width/2, height/2-150, 100, 0 ,2*Math.PI)
+      ctx.fillStyle="#1cd66c"
+      ctx.fill()
+      ctx.beginPath()
+      ctx.arc(width/2, height/2-150, 90, 0 ,2*Math.PI)
+      ctx.fillStyle="#b2b2b2"
+      ctx.fill()
+    }
+    drawRing()
+    // function drawCircle(x,y) {
+    //   ctx.beginPath();
+    //   ctx.arc(x,y,50,0,2*Math.PI);
+    //   var gradient=ctx.createLinearGradient(0,0,width,0);
+    //   gradient.addColorStop("0","magenta");
+    //   gradient.addColorStop("0.5","blue");
+    //   gradient.addColorStop("1.0","red");
+    //   // Fill with gradient
+    //   ctx.strokeStyle=gradient;
+    //   ctx.stroke();
+    // }
+    // window.addEventListener('mousemove',function(event){
+    //         mouseX = event.clientX;
+    //         mouseY = event.clientY;               
+    //   })
+    // // drawCircle()
+    // setInterval(function(){
+    //   ctx.fillStyle = 'rgba(39,64,139,0.5)'; 
+    //   ctx.fillRect(0,0,width,height); 
+    //   drawCircle(mouseX,mouseY)
+    //   /*  draw(); */ 
+    // },100)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-07 15:03:24
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-07 16:13:04
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      html,body{
+        height: 100%
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+      }
+      .root {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .box {
+        display: flex;
+        height: 300px;
+        width: 200px;
+        margin-right:40px ;
+        border-radius: 5px;
+      }
+     
+  </style>
+  </head>
+  <body>
+    <div class="root">
+      <canvas id="myCanvas" width="800" height="500"></canvas>
+    </div>
+  </body>
+  <script>
+    var canvas = document.getElementById('myCanvas')
+    var ctx = canvas.getContext("2d")
+    function drawLine (seat) {
+      ctx.beginPath()
+      ctx.moveTo(0,0)
+      ctx.lineTo(200, 0)
+      ctx.closePath()
+      ctx.stroke()
+    }
+    function getSeat(length=200,angle) {
+      const x = length * Math.sin
+    }
+    canvas.addEventListener("mousemove", function(event){
+      const rate = (Math.abs(event.offsetY)/Math.abs(event.offsetX-200))
+      const d = 180*Math.atan(rate)/(Math.PI)
+      ctx.rotate(d*Math.PI/180)
+     
+    })
+  </script>
+</html>

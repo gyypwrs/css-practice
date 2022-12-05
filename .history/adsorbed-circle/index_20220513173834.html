@@ -1,0 +1,121 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-13 15:49:25
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-13 17:38:00
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body {
+      background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      height: 100%;
+    }
+    ul,li {
+      list-style: none;
+    }
+    .battery-cover {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      background-color: rgba(0,0,0);
+    }
+    .battery-wrapper {
+      margin-top: 200px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .electric-quantity {
+      font-size: 50px;
+      color: #fff;
+      text-align: center;
+      z-index: 20;
+    }
+    .battery-circle {
+      position: relative;
+      margin-top: -125px;
+      width: 200px;
+      height: 200px;
+      /* background-color: #23d96e; */
+      /* filter: blur(8px); */
+    }
+    .battery-circle::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(43, 220, 112,0.7);
+      border-radius: 42% 38% 62% 49% / 45%;
+      animation: rotate 5s infinite linear;
+    }
+    @keyframes rotate {
+      50% {
+        border-radius: 45% / 42% 38% 58% 49%;
+      }
+      100% {
+        transform: translate(0, 0) rotate(720deg)
+      }
+    }
+    .battery-circle::before{
+      content: '';
+      position: absolute;
+      width: 176px;
+      height: 176px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0);
+      border-radius: 50%;
+      z-index: 10;
+    }
+    li {
+      border: 50%;
+      background-color: rgba(43, 220, 112,0.7);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="battery-cover">
+    <div class="battery-wrapper">
+      <div class="electric-quantity">50%</div>
+      <div class="battery-charge">
+        <div class="battery-circle"></div>
+        <ul class="battery-bubble">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+   
+  </script>
+</body>
+
+</html>

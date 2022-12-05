@@ -1,0 +1,68 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hongyu
+ * @Date: 2022-05-14 18:11:46
+ * @LastEditors: Hongyu
+ * @LastEditTime: 2022-05-17 11:35:49
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .wrapper {
+      width: 800px;
+      height: 550px;
+      margin: auto;
+      /* background: red; */
+    }
+
+    .push-line {
+      position: relative;
+      height: 550px;
+      width: 100px;
+      background-color: green;
+      left: 5px;
+      /* border-right: 2px solid green; */
+      cursor: e-resize;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="push-line" onmousedown="move(this)" onmouseup="removeListener(this)"></div>
+  </div>
+  <script>
+    handleMouseMove(event)
+    function move(e) {
+      e.addEventListener("mousemove", function (event) {
+        const wrapperLeft = document.getElementsByClassName('wrapper')[0].offsetLeft
+        const left = event.clientX - wrapperLeft
+        console.log('left', left)
+        event.target.style.left = `${left}px`
+      })
+    }
+
+    function removeListener(e) {
+      // debugger
+      e.removeEventListener("mousemove", handleMouseMove(event))
+    }
+  </script>
+</body>
+
+</html>
